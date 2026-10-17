@@ -204,4 +204,4 @@ dotnet run --project "Server~/samples/Geuneda.Notice.SampleServer" --no-launch-p
   - '오늘'의 기준이 기기 시간대의 자정: SpellDefense 는 UTC 날짜 문자열이라 한국에서는 오전 9시에 풀립니다.
   - 언어 태그를 줄여 가며 찾음(`zh-Hant-TW` → `zh-Hant` → `zh`): 레퍼런스는 정확한 언어 키와 기본 키만 봅니다.
   - 서버 운영 파일의 오타를 시작·교체 때 거절(엄격한 읽기).
-- 화면(웹 페이지 공지, JS 커맨드 `read`·`refresh`)은 웹뷰 패키지에서 다룹니다.
+- 웹 페이지 공지는 `com.geuneda.webview` 의 공지 명령(`notice.list`·`notice.read`·`notice.refresh`, 이벤트 `notice.changed`)이 이 서비스의 목록과 기록을 그대로 씁니다.
