@@ -1,0 +1,35 @@
+{
+  "defaultLanguage": "en",
+  "notices": [
+    {
+      "id": "welcome",
+      "priority": 1,
+      "contents": {
+        "ko": { "title": "환영합니다", "body": "공지 샘플입니다.", "linkUrl": "https://example.com/notice/welcome", "linkLabel": "자세히" },
+        "en": { "title": "Welcome", "body": "This is a sample notice.", "linkUrl": "https://example.com/notice/welcome", "linkLabel": "More" }
+      }
+    },
+    {
+      "id": "maintenance-2026-10",
+      "category": "event",
+      "popup": true,
+      "action": "shop:gem_100",
+      "startsAt": "2026-01-01T00:00:00Z",
+      "endsAt": "2099-01-01T00:00:00Z",
+      "platforms": ["android", "ios"],
+      "contents": {
+        "en": { "title": "Mobile event" }
+      }
+    },
+    {
+      "id": "ended",
+      "endsAt": "2020-01-01T00:00:00Z",
+      "contents": { "en": { "title": "Ended" } }
+    },
+    {
+      "id": "future",
+      "startsAt": "2099-01-01T00:00:00Z",
+      "contents": { "en": { "title": "Not announced yet" } }
+    }
+  ]
+}

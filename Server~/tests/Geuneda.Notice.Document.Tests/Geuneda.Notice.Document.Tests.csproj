@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    Unity EditMode 문서 테스트(Tests/EditMode/Document)를 그대로 링크해 .NET 에서도 돌린다. 두 런타임에서 같은 테스트가 통과해야
+    서버가 쓴 문서를 클라이언트가 같게 읽는다고 본다. Unity 테스트 프레임워크와 같은 NUnit 3 을 쓴다
+  -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>Geuneda.Notice.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="NUnit" Version="3.14.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/Geuneda.Notice.Server/Geuneda.Notice.Server.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Label="Unity 테스트와 공유">
+    <Compile Include="$(NoticePackageDir)Tests/EditMode/Document/*.cs" LinkBase="Shared" />
+  </ItemGroup>
+</Project>

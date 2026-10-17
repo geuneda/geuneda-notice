@@ -1,0 +1,17 @@
+{
+  "name": "com.geuneda.notice",
+  "displayName": "Geuneda Notice",
+  "author": "geuneda",
+  "version": "0.1.0",
+  "unity": "2021.3",
+  "license": "MIT",
+  "description": "게임 공지 목록입니다. 모든 언어·플랫폼의 공지를 담은 JSON 문서를 ETag 조건부 요청(304)으로 받아, 넘긴 시각 기준 기간(시작 포함·끝 제외)·플랫폼·언어(태그를 줄여 가며 찾고 문서 기본 언어로)·분류로 거르고 우선순위·시작 시각 순으로 정렬합니다. 읽음(최근 500개)과 '오늘 안 보기'(하루 기준 시간대의 다음 날 시작까지)는 PlayerPrefs 에 기록하고, 안 읽은 수(레드닷)와 게임 진입 때 띄울 공지를 줍니다. 문서 형식은 Unity 와 .NET 이 같은 소스로 읽고, ASP.NET Core 배포 헬퍼(Server~)가 파일·게임 원천에서 지금 보이는 공지만 ETag 와 함께 내려줍니다.",
+  "type": "library",
+  "hideInEditor": false,
+  "dependencies": {
+    "com.geuneda.core": "0.4.0",
+    "com.geuneda.http": "0.1.0",
+    "com.cysharp.unitask": "2.5.10",
+    "com.unity.nuget.newtonsoft-json": "3.2.1"
+  }
+}

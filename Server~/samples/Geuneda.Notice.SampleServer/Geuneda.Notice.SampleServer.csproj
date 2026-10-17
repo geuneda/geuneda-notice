@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <!-- 파일 원천(notices.json)을 내려주는 샘플 공지 서버. Unity 상호 운용 테스트(Tests/EditMode/SampleServerInteropTest)가 이 서버에 붙는다 -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>Geuneda.Notice.SampleServer</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/Geuneda.Notice.Server/Geuneda.Notice.Server.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="notices.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
